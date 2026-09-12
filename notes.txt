@@ -1,0 +1,52 @@
+2  --done
+3  50%
+4  --
+5  --
+6  --
+7  --
+8  --
+9  --
+10 --
+11 --
+12 --  (see if their implementation to be included in the ppt? also see if adding montgomery reductions and short barrett reductions are imp to be added in the ppt.)
+
+.New Hope is an assymetric key encryption scheme.
+.It is one of the simplest lattice based post quantum algorithm.
+
+1.History
+#B.C.N.S
+->Bos et al proposed a concrete instantiation of the key excahnge scheme of 
+peikert's improved version of the original protocol of Ding, Xie, Lin.
+->(did not understand)He proved its practicality by integrating their 
+implementation as additional cipher-suite into the TLS.
+
+B.C.N.S was disappointing due to 2 major factors.
+->(did not understand)analysis of the failure probability was far from tight.
+    -consequence: large modulus (q = 2^32) and security was 
+    lower that what could be achieved using Ring-LWE for n = 1024.
+->The error calculation was too inefficient due to the misconception 
+that high quality gaussian noise is crucial for enc based on LWE.
+
+#Improvements in NEWHOPE.
+->(did not understand)improvements in the analysis of the failure probability and use of 
+lattice D4 to allow error reconcilation beyond original bounds of B.C.N.S this reduced 
+the modulus form 2^32 -> 12289 (q < 2^14).
+
+->(did not understand at all)proposed a lower bound to all quantum algo's solving the shortest
+vector problem and deduce the potential performance of a quantum BKZ algorithm. Improved 
+proposal provides 128 bits of post quantum security with a comfortable margin.
+
+->replace the almost perfect discrete gaussian ditribution with something relalively close 
+but easier to sample.
+
+->replace the fixed parameter a with freshly chosen random one in each key exchange.
+
+->(did not understand)encoding of polynomials in number-theoretic transform (N.T.T) 
+to reduce some of the NTT transformations inside the protocol.
+
+->(did not understand at all)descibed an efficient approach to lazy reduction inside NTT, which 
+is based on a combination of Montgomery reductions and short Barrett reductions.
+
+#Lattice based cryptography
+
+#
