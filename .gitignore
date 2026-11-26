@@ -1,0 +1,8 @@
+*.o
+server
+client
+test_newhope
+test_ntt
+test_cbd
+test_kat
+benchmark
